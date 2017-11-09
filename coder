@@ -1,0 +1,39 @@
+------------------PQ--------------------------
+
+library(ggplot2)
+ ggplot(data=tablepq, aes(x=size, y=comparisons)) +
+ theme(legend.title=element_blank()) +
+ geom_point(color='orange') +
+ geom_smooth(method = 'lm', se=FALSE, aes(color="O(n)"))+
+ xlab("Size") +
+ ylab("Comparisons") +
+ ggtitle("Priority Queue Graph") +
+ xlim(0,500) +
+ ylim(0,500)
+
+-----------------HEAP--------------------------
+
+ library(ggplot2)
+ ggplot(data=tableheap, aes(x=size, y=comparisons)) +
+ theme(legend.title=element_blank()) +
+ geom_point(color='green') +
+ geom_smooth(method = 'lm', se=FALSE, aes(color="O(log n)"))+
+ xlab("Size") +
+ ylab("Comparisons") +
+ ggtitle("Heap Graph")
+
+
+
+ ----------heap alterando tamanho-----------
+ ggplot(data=tableheap, aes(x=size, y=comparisons)) +
+ theme(legend.title=element_blank()) +
+ geom_point(color='green') +
+ geom_smooth(method = 'lm', se=FALSE, aes(color="O(log n)"))+
+ xlab("Size") +
+ ylab("Comparisons") +
+ ggtitle("Heap Graph") +
+ xlim(0,500) +
+ ylim(0,10)
+
+
+
